@@ -37,6 +37,10 @@ a{
    
 }
 
+section{
+   padding-top:100px ;
+}
+
 /*nav*/
 .nav{
    width: 100%;
@@ -94,11 +98,7 @@ a{
 }
 
 /*header*/
-.header_container{
-   width: 100%;
-   height: 400px;
-   background-image: url(images/home-image.jpg);
-}
+
 section{
    padding:2rem 9%;
 }
@@ -146,21 +146,66 @@ section{
    background: var(--color-primary);
 }
 
-@media(max-width:991px){
-   header{
-      padding:2rem;
-   }
-}
+/*grid layout for the products*/
 .selling_container{
    width: 100%;
    display:grid;
-   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-   grid-gap: 20px;
-
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap:1.5rem;
+   margin-top: 2rem;
 }
+
+.selling_h2{
+   font-size: 32px;
+}
+
+.selling_p{
+   margin-top:15px;
+   margin-bottom:25px;
+}
+
+.selling_btn{
+   padding:12px 24px;
+   background-color:var(--color-dark-1);
+   color : aliceblue;
+}
+
+.selling_btn:hover{
+   background-color: var(--color-primary);
+}
+
+.selling_item {
+   background-color: #fff;
+   border-radius: 8px;
+   padding: 1rem;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   transition: transform 0.3s ease;
+   height: 400px;  /* Adjust as needed */
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   overflow: hidden; /* Ensures content doesn't overflow */
+}   
+
+.selling_item_title{
+   margin:6px 0px;
+   font-weight: 600;
+}
+
+/* Ensuring images take up 75% of the container height */
+.selling_item_img {
+   width: 100%;
+   height: 75%;
+   object-fit: cover;
+   border-radius: 8px;
+   margin-bottom: 1rem;
+}
+
 .selling_item_btn{
    display: inline-block;
-   margin-top: 1rem;
+   margin-top: auto;
    border-radius: 5rem;
    background: var(--color-dark-1);
    color:aliceblue;
